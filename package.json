@@ -4,6 +4,6 @@
   },
   "scripts": {
     "start": "node server.js",
-    "build": "your-build-command-here"
+    "build": "npm run build"
   }
 }
