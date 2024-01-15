@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.79"> <!-- Add viewport meta tag -->
+    <title>Nika & Adrian</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Dancing+Script&family=Great+Vibes&family=Nunito:wght@700&family=Poppins:wght@300;400;500&family=Whisper&display=swap" rel="stylesheet">
+
+    
+</head>
+<body>
+
+
+    <!-- VRATA -->
+    <section>
+        <div class="splash">
+            <img class="door doorImage doorImageLEFT" src="/images/ilutracija crkva LEFT2.png" alt="Left Door">
+            <img class="door doorImage doorImageRIGHT" src="/images/ilustracija crkva RIGHT2.png" alt="Right Door">
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="invitation-text">
+            <p>Dragi Naši,</p>
+            <p>S veseljem Vas pozivamo</p>
+            <p>da s nama podjelite</p>
+            <p>dan našeg vjenčanja</p>
+            <p>koje će se održati</p>
+            <p>18.5.2024. godine</p>
+            <h3>Nika i Adrian</h3>
+        </div>
+    </div>
+
+    <div class="general-info">
+        <div class="left-section">
+            <p>13:00h OKUPLJANJE</p>
+            <p>KOD ADRIANA</p>
+            <p>RESTORAN BALTAZAR</p>
+            <p>NOVA VES 4</p>
+        </div>
+        <div class="center-section">
+            <p>13:00h OKUPLJANJE</p>
+            <p>KOD NIKE</p>
+            <p>NOVA VES 21</p>
+        </div>
+        <div class="right-section">
+            <p>17:00h CRKVA SV. IVANA</p>
+            <p>KRSTITELJA</p>
+            <p>NOVA VES 64A</p><br>
+            <p>18:30h LAUBA</p>
+            <p>PRILAZ BARUNA</p>
+            <p>FILIPOVIĆA 23A</p>
+        </div>
+    </div>
+
+    <div class="form-container">
+        <label class="form-label">
+            <p>Prijevoz od Crkve do Laube je osiguran.</p>
+            <p>Radi lakše organizacije prijevoza <br> molimo vas da potvrdite svoj dolazak u Crkvu.</p>
+        </label>
+        <form id="form">
+          <div class="field">
+            <label for="from_name"></label>
+            <!-- <input type="text" name="from_name" id="from_name"> -->
+          </div>
+      
+          <div class="field">
+            <label>Odaberite opciju:</label>
+            <button type="button" class="option-btn" data-option="dolazak">Dolazak u crkvu</button>
+            <!-- <button type="button" class="option-btn" data-option="vege">Vege menu</button>
+            <button type="button" class="option-btn" data-option="lauba">Dolazak u Laubu</button> -->
+          </div>
+      
+          <div class="field">
+            <h2 class="heading">Dodatno: </h2>
+            <textarea name="additional_message" id="additional_message" cols="30" rows="10" placeholder="Upiši ime i prezime osoba koje dolaze na vjenčanje." class="message" required></textarea>
+          </div>
+      
+          <input type="submit" id="button" value="Pohrani dolazak">
+        </form>
+      </div>
+      
+      <script src="script.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+      <script type="text/javascript">emailjs.init('WVBp5h39_bTBMjGYa')</script>
+      <script src="doorAnimation.js"></script>
+
+</body>
+</html>

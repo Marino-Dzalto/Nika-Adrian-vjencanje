@@ -1,0 +1,216 @@
+.splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Podesite z-index na manju vrijednost */
+}
+
+.form-container {
+    /* Dodajte veći z-index da bude iznad .splash-a */
+    z-index: 2;
+}
+
+.splash {
+    z-index: 1;
+}
+
+.form-container {
+    z-index: 2; /* Postavite veći z-index */
+}
+.splash {
+    pointer-events: none; /* Dodajte ovo */
+}
+
+.splash.doorOpen {
+    pointer-events: auto; /* Poništite postavke tijekom animacije */
+}
+
+
+.doorImage {
+    width: 50%;
+    height: 100%;
+    object-fit: inherit;
+    transform-origin: left top;
+    transition: all 1s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.doorImageLEFT {
+    transform-origin: left top;
+    z-index: 2;
+}
+
+.doorImageRIGHT {
+    transform-origin: right top;
+    left: 50%;
+    z-index: 1;
+}
+
+.doorOpenR {
+    transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(105deg);
+}
+
+.doorOpenL {
+    transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+}
+
+
+/* Base styles for larger screens */
+body {
+    /* font-family: 'Whisper', cursive; */
+    font-family: 'Bauer Bodoni Regular';
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-image: url("/images/alter-2-pozivnica-center.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: auto;
+    height: 150vh;
+    display: grid;
+    align-items: center; 
+    color: black;
+}
+
+.invitation-text {
+    margin: 0 auto; 
+    max-width: 600px;
+    margin-bottom: 25em;
+    text-align: center;
+}
+
+.invitation-text p {
+    font-size: 1.8em;
+    line-height: 1.5;
+}
+
+.invitation-text h3 {
+    font-family: 'Bauer Bodoni Regular';
+    font-size: 2em;
+}
+
+/* Media query for mobile phones */
+@media screen and (max-width: 768px) {
+    .container {
+        background-size: cover; /* Adjust background size for mobile */
+        height: auto; /* Remove fixed height for mobile */
+    }
+
+    /* .invitation-text {
+    }
+
+    .invitation-text p {
+    }
+
+    .invitation-text h3 {
+    } */
+}
+
+/* General styles */
+.general-info {
+    background-image: url("images/pozivnica-left.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.left-section,
+.center-section,
+.right-section {
+    text-align: center;
+    margin: 10px 0; /* Add margin between sections */
+}
+
+.general-info p {
+    font-size: 1.6em;
+    margin: 5px 0; /* Adjust margin for better spacing */
+    color: black;
+}
+
+
+    /* FORM CONTAINER */
+  .form-container {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("/images/pozivnica-right.png");
+    position: relative;
+    padding: 20px;
+    background-color: #fff; /* Adjust background color as needed */
+    border-radius: 10px; /* Add rounded corners as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.form-label {
+    text-align: center;
+    color: #333; /* Set the color you prefer */
+    font-size: 30px; /* Set the font size you prefer */
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.field {
+    margin-bottom: 20px; /* Adjust spacing between fields */
+}
+
+.field label {
+    display: block;
+    font-size: 30px; /* Set the font size you prefer */
+    color: #333; /* Set the color you prefer */
+    margin-bottom: 5px; /* Adjust spacing between label and input */
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px; /* Set the font size you prefer */
+    border: 1px solid #ddd; /* Add a border */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+.field textarea {
+    resize: vertical; /* Allow vertical resizing of the textarea */
+    width: 95%;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #40a45a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.field h2{
+    font-size: 30px;
+}
+/* Optional: Style for the selected button */
+.option-btn.selected {
+    background-color: #40a45a;
+    color: #fff;
+}
+.option-btn[data-option="dolazak"] {
+    font-size: 1rem; /* Povećajte veličinu fonta */
+    padding: 15px; /* Povećajte prostor unutar gumba */
+    border-radius: 5rem;
+    color: #fff;
+    background-color: #40a45a;
+}
