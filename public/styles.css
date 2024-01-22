@@ -36,7 +36,7 @@
     height: 100%;
     object-fit: inherit;
     transform-origin: left top;
-    transition: all 1s ease-in-out;
+    transition: all 2s ease-in-out;
     position: fixed;
     top: 0;
     left: 0;
@@ -95,8 +95,16 @@ body {
     line-height: 1.5;
 }
 
+@font-face {
+    font-family: 'Oakland';
+    src: url('../fonts/oakland-mainfile/Oakland.otf') format('opentype'),
+         url('../fonts/oakland-mainfile/Oakland.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .invitation-text h3 {
-    font-family: 'Bauer Bodoni Regular';
+    font-family: 'Oakland', cursive; /* Fallback to a generic sans-serif font */
     font-size: 2em;
 }
 
