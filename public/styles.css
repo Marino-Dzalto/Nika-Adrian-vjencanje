@@ -86,7 +86,7 @@ body {
 .invitation-text {
     margin: 0 auto; 
     max-width: 600px;
-    margin-bottom: 25em;
+    margin-bottom: 30em;
     text-align: center;
 }
 
@@ -96,17 +96,17 @@ body {
 }
 
 @font-face {
-    font-family: 'Oakland';
-    src: url('../fonts/oakland-mainfile/Oakland.otf') format('opentype'),
-         url('../fonts/oakland-mainfile/Oakland.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+    font-family: 'WildOaklandsOblique';
+    src: url('WildOaklands.woff2') format('woff2'),
+    url('WildOaklands.ttf') format('ttf');
+  }
 
 .invitation-text h3 {
-    font-family: 'Oakland', cursive; /* Fallback to a generic sans-serif font */
-    font-size: 2em;
+    font-family: 'WildOaklandsOblique', sans-serif;
+    font-size: 5.5em;
+    color: #333;
 }
+
 
 /* Media query for mobile phones */
 @media screen and (max-width: 768px) {
